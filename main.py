@@ -5,77 +5,7 @@ from urllib.parse import urljoin
 
 app = Flask(__name__)
 
-search_form = '''
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proxy Search</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <style>
-        body {
-            background-color: #C8A2C8; /* Lilac color */
-            color: #4B0082; /* Indigo color for text */
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        h1 {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        .search-container {
-            background-color: #E6E6FA; /* Light lilac color */
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-
-        input[type="text"] {
-            width: 80%;
-            padding: 10px;
-            border: 1px solid #4B0082;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-
-        button {
-            padding: 10px 20px;
-            background-color: #4B0082;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #3A0068;
-        }
-
-        .back-button {
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="search-container">
-        <h1>Cesium</h1>
-        <form action="/proxy" method="get">
-            <input type="text" id="url" name="url" placeholder="Enter URL (e.g., google.com)" required>
-            <button type="submit">Search</button>
-        </form>
-    </div>
-</body>
-</html>
-'''
+search_form = "index.html"
 
 @app.route('/')
 def home():
